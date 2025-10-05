@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using Application.Abstractions.Authentication;
-using Application.Data;
-using Application.Users.Register;
+﻿using Application.Data;
 using Domain.Users;
 using Microsoft.EntityFrameworkCore;
 using Moq;
-using MockQueryable.Moq;
-using SharedKernel;
-using Xunit;
 
 namespace ApplicationTests.Users;
 
@@ -48,7 +38,7 @@ public class RegisterUserTests
         mockContext.Verify(c => c.SaveChangesAsync(new CancellationToken()), Times.Once);
     }
 
-    
+
     [Fact]
     public async Task SaveChanges_Should_Throw_Exception_When_Database_Error()
     {
