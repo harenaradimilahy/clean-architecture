@@ -10,6 +10,7 @@ dotnet ef database update
 ```
 Ensuite, corrigez les fichiers de migration générés automatiquement si certains éléments ne sont pas compatibles avec Visual Studio, puis lancez le projet.
 
+##  Architecture
 
 - SharedKernel project with common Domain-Driven Design abstractions.
 - Domain layer with sample entities.
